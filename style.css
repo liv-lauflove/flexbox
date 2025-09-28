@@ -35,7 +35,7 @@ body {
 
 /* latihan 2 flex-responsive, kenapa tulisannya gak ikut? */
 .container-dua {
-    width: 800px;
+    max-width: 800px; /*biar responsive kasi max*/
     margin: 50px auto;
     
 }
@@ -54,6 +54,26 @@ body {
     background-color: rgb(228, 145, 145);
 }
 
+/* latihan 3-galeri */
+.container-tiga {
+    max-width: 800px; /*walaupun max buat responsive, tpi ttp jelek, mau dibikin klu dibuka di hp baris pertama jadi 2 gambar, dgn cara widthnya img ubh jdi 50%*/
+    margin: 50px auto;
+    display: flex; /*bikin smua gambar sejajar ditengah2*/
+    flex-wrap: wrap; /*biar gambarnya kebawah klu ndak cukup, tpi stelah di wrap gambranya jdi besar lgi kebawah, mknya dikasi width di kelas thumbnail*/
+    justify-content: center; /*biar gambarnya di tengah2*/
+}
+.thumbnail{
+    width: 50%; /*biar gambarnya 4 disatu baris, 100% : 4 = 25%, sisanya turun kebawah, pt2: tdinya 25%, tpi diatas dh max, krn mau responsive, di hp jadi 2 gambar dlm 1 baris, mknya ubh jadi 50%*/
+}
+.thumbnail img{
+    width: 100%; /*biar gambarnya memenuhi kotak, jdai gamabrnya mengecil biar bisa sesuaikan dengan webnya*/
+
+}
+
+
+
+
+
 /* responsive */
 @media( min-width: 600px ){
     .container-dua{
@@ -62,5 +82,8 @@ body {
 }
     .layanan{
         width: 30%; /*dicut dri atas buat responsive*/
+    }
+    .thumbnail{
+        width: 25%; /*biar gambarnya 4 disatu baris, 100% : 4 = 25%, sisanya turun kebawah, klu di hp jdi 2 gambar dlm 1 baris, klu di laptop jdi 4 gambar dlm 1 baris*/
     }
 }
