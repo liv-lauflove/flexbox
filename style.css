@@ -70,6 +70,21 @@ body {
 
 }
 
+/* latihan 4 */
+.container-empat{
+    width: 800px;
+    margin: 50px auto; 
+}
+.card {
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    background-color: #eee;
+}
+.card .header {
+    height: 150px;
+    background-color: #666;
+
+}
 
 
 
