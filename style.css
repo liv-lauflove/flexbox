@@ -21,7 +21,7 @@ body {
 .kolom-utama{
     flex: 3; /*biar dia lebih luas, ambil 3 bagian*/
     order: 2; /*biar dia di urutan ke 2, tpi klu cmn kolom utama yg dikasi order dia akan pindah ke kanan aja, krn kelas lain blm dikasi order*/
-    
+
 }
 .sidebar-satu{
     flex: 1;
@@ -31,4 +31,36 @@ body {
     flex: 1;
     order: 3; /*biar dia di urutan ke 3, jd dia di kanan*/
 
+}
+
+/* latihan 2 flex-responsive, kenapa tulisannya gak ikut? */
+.container-dua {
+    width: 800px;
+    margin: 50px auto;
+    
+}
+.layanan {
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+.layanan.satu {
+    background-color: cornflowerblue;
+}
+.layanan.dua {
+    background-color: pink;
+}
+.layanan.tiga {
+    background-color: rgb(228, 145, 145);
+}
+
+/* responsive */
+@media( min-width: 600px ){
+    .container-dua{
+    display: flex; /*dicut dri atas buat responsive*/
+    justify-content: space-between;
+}
+    .layanan{
+        width: 30%; /*dicut dri atas buat responsive*/
+    }
 }
